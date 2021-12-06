@@ -42,7 +42,7 @@ public class ChatClient {
 
     private void run() throws IOException {
         try {
-            var socket = new Socket("192.168.1.132", 5000);
+            var socket = new Socket(serverAddress, 5000);
             in = new Scanner(socket.getInputStream());
             out = new PrintWriter(socket.getOutputStream(), true);
 
